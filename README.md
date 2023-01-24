@@ -1,6 +1,6 @@
-# Competative Coding
+# Competitive Coding
 
-Wecome to my repository of competative programming practice.
+Wecome to my repository of competitive programming practice.
 
 ## Goals
 - CCC
