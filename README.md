@@ -13,7 +13,7 @@ Wecome to my repository of competitive programming practice.
     - [ ] 2019
     - [ ] 2020
     - [ ] 2021
-    - [ ] 2022
+    - [x] 2022
   - [ ] S4
     - [ ] 2014
     - [ ] 2015
