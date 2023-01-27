@@ -6,7 +6,7 @@ Wecome to my repository of competitive programming practice.
 - CCC
   - [ ] S3
     - [x] 2014
-    - [ ] 2015
+    - [x] 2015
     - [ ] 2016
     - [ ] 2017
     - [ ] 2018
