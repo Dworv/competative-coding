@@ -7,9 +7,9 @@ Wecome to my repository of competitive programming practice.
   - [ ] S3
     - [x] 2014
     - [x] 2015
-    - [ ] 2016
+    - [ ] 2016˝
     - [ ] 2017
-    - [ ] 2018
+    - [x] 2018
     - [ ] 2019
     - [ ] 2020
     - [ ] 2021
