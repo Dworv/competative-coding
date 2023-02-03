@@ -1,5 +1,6 @@
 WALL = 0
 CAMERA = 1
+UNKNOWN = 2
 
 class Node:
     def __init__(self):
@@ -16,6 +17,7 @@ class Conveyor:
     def __init__(self, direction):
         self.direction = direction
         self.connections = []
+        self.destination = UNKNOWN
     def __repr__(self):
         return self.direction
 
@@ -97,7 +99,14 @@ while unvisited:
                 conveyors = [(ox, oy)]
                 good = True
                 while True:
-                    if neighbor.direction == Conveyor.UP:
+                    if neighbor.destination != UNKNOWN:
+                        if neighbor.destination is not None:
+                            if neighbor == None:
+                                good = False
+                                break
+                            else:
+                                ox, oy = neighbor.destination
+                    elif neighbor.direction == Conveyor.UP:
                         oy -= 1
                     elif neighbor.direction == Conveyor.DOWN:
                         oy += 1
@@ -111,12 +120,18 @@ while unvisited:
                     target = rows[oy][ox]
                     if isinstance(target, Conveyor):
                         neighbor = target
+                        conveyors.append((ox, oy))
                     elif isinstance(rows[oy][ox], Node):
+                        for cx, cy in conveyors:
+                            rows[cy][cx].destination = (ox, oy)
                         neighbor = target
                         break
                     else:
                         break
                 if not good:
+                    for cx, cy in conveyors:
+                        rows[cy][cx].destination = None
+                    neighbor = target
                     continue
             if isinstance(neighbor, Node):
                 if neighbor.watched == True:
