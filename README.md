@@ -8,7 +8,7 @@ Wecome to my repository of competitive programming practice.
     - [x] 2014
     - [x] 2015
     - [ ] 2016˝
-    - [ ] 2017
+    - [x] 2017
     - [x] 2018
     - [ ] 2019
     - [ ] 2020
